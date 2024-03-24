@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400..800&display=swap');
+
+:root {
+    --pr-color: #fff;
+    --second-color: #0a0a0a;
+    --cubicbz: cubic-bezier(.9, 0, .1, 1);
+    --fz-big: 60px;
+    --pd: 50;
+}
+
+* {
+    box-sizing: border-box;
+    font-family: 'Syne', sans-serif;
+    font-weight: 800;
+    margin: 0;
+    padding: 0;
+    font-feature-settings: 'pnum' on 'lnum' on;
+}
+
+body {
+    position: relative;
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    background: rgb(8, 25, 30);
+    background: linear-gradient(0deg, rgba(8, 25, 30, 1), rgba(70, 62, 40, 1) 78%, rgba(93, 76, 43, 1) 99%);
+}
+
+/* .bg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: url(./img/01.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    filter: blur(10px);
+    transform: scale(2);
+    opacity: .6;
+} */
+
+.content {
+    display: flex;
+}
+
+.section {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+}
+
+.section_bl {
+    width: 100%;
+    height: 100%;
+}
+
+.title {
+    position: absolute;
+    margin: 0;
+    top: 50%;
+    left: 10vw;
+    line-height: 1;
+    font-size: 105px;
+    mix-blend-mode: difference;
+    transform: translateY(-50%);
+    z-index: 4;
+}
+
+.title span {
+    display: block;
+    color: #FBC65D;
+}
+
+.text {
+    position: absolute;
+    bottom: 10vw;
+    right: 10vw;
+    line-height: 1.5;
+    color: var(--pr-color);
+    color: #FBC65D;
+    mix-blend-mode: difference;
+    z-index: 2;
+}
+
+[data-scroll-container] {
+    overflow-y: hidden !important;
+    overflow-x: hidden !important;
+}
+
+.c-scrollbar {
+    opacity: 1;
+    mix-blend-mode: difference;
+    pointer-events: none;
+}
+
+.c-scrollbar-thumb {
+    background-color: #FBC65D;
+    opacity: 1;
+}
+
+.vertical {
+    width: 100vw;
+    min-width: 100vw;
+    height: 100%;
+}
+
+.vertical .inner-section {
+    position: relative;
+    width: 100vw;
+    height: 100vh !important;
+}
+
+.image {
+    position: absolute;
+    width: 40%;
+    height: 90%;
+    top: 50%;
+    right: 0;
+    overflow: hidden;
+    transform: translateY(-50%);
+}
+
+.img_bl {
+    will-change: transform;
+}
+
+.img_bl img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.Horizontal_img .img_bl {
+    position: absolute;
+    width: 1100px;
+    height: 100%;
+    top: 0;
+    left: 0;
+    transform: translateX(-55%);
+}
+
+.verical_img .img_bl {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    will-change: transform;
+    transform: translateY(-55%);
+}
+
+.vertical .title {
+    transform: translateY(-100%);
+}
